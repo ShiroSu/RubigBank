@@ -1,0 +1,88 @@
+@use "sass:math";
+@import "../app.component.scss";
+@debug 100%;
+img {
+    width: 100%
+}
+
+.card {
+    @include card;
+    font-size: 27px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    >.features__title {
+        position: absolute;
+    }
+}
+
+.logo {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.features__carousel {
+    display: flex;
+    width: 330%;
+    transition: all .8s;
+
+    &.place {
+        transform: translateX(0);
+    }
+    &.pace {
+        transform: translateX(math.div(-100%, 3));
+    }
+    &.ace {
+        transform: translateX(math.div(-100%, 3)*2);
+    }
+}
+.features__inner {
+    width: 100%;
+    margin-right: 3%;
+    overflow: hidden;
+    display: flex;
+
+    &.active {
+        transform: none;
+    }
+}
+.features__text-side {
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+
+    .features__title {
+        margin-top: 40px;
+    }
+}
+.features__text {
+    margin-top: 20%;
+}
+
+.features__picture-side {
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+}
+.nav__dot {
+    margin: 0 10px;
+    width: 18px;
+    height: 18px;
+    background-color: #ccc;
+    border-radius: 50%;
+    transition: all .3s;
+
+
+    &:hover {
+        background-color: #aaa;
+    }
+
+    &.active {
+        background-color: #aaa;
+        transform: scale(1.2);
+    }
+}

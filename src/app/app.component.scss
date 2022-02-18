@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    line-height: normal;
+}
+
+@mixin container {
+    margin: 20px 10%;
+}
+
+@mixin card {
+    overflow: hidden;
+    padding: 15px 30px;
+    border-radius: .7em;
+    color: #0b1023;
+    background-color: #fafafa;
+    font-family: "Comic Neue", "Helvetica Neue", sans-serif;
+}
+
+.logo {
+    padding-bottom: 10px;
+    font-family: "Kaushan Script", cursive;
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: .02em;
+}

@@ -1,0 +1,20 @@
+<div class="card features">
+    <p class="features__title"><span class="logo">RUBigBank</span> is here</p>
+    <div [class]="'features__carousel '+shown">
+        <div class="features__inner" *ngFor="let item of _ace" [id]="item.id">
+            <div class="features__text-side">
+                <p class="features__title">for your {{item.id}}!</p>
+                <p class="features__text">{{item.text}}</p>
+            </div>
+            <div class="features__picture-side"><img [src]="'../../assets/img/'+item.id+'.png'" /></div>
+        </div>
+    </div>
+    <div class="nav">
+        <div
+            [class]="'nav__dot '+((shown==item.id)?'active':'')" 
+            *ngFor="let item of _ace"
+            [id]="item.id"
+            (click)="changeShown(item.id)"
+        ></div>
+    </div>
+</div>

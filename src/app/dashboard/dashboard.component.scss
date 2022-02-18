@@ -1,0 +1,8 @@
+@import "../app.component.scss";
+
+.container {
+    @include container;
+}
+.card {
+    @include card;
+}

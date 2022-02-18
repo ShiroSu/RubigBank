@@ -1,0 +1,10 @@
+<header class="header">
+    <div class="header__inner">
+        <div class="unselectable">
+            <h1 class="logo">RUBigBank</h1>
+        </div>
+        <mat-nav-list class="nav-list">
+            <a mat-list-item [routerLink]="link.routerLink" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" *ngFor="let link of links" class="nav-list__item" style="padding: 0;"> {{ link.title }} </a>
+        </mat-nav-list>
+    </div>
+</header>
