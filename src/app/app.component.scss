@@ -5,16 +5,26 @@
 
 @mixin container {
     margin: 20px 10%;
+    width: 80%;
+    position: relative;
 }
 
 @mixin card {
     overflow: hidden;
     padding: 15px 30px;
     border-radius: .7em;
+    font-size: 20px;
     color: #0b1023;
     background-color: #fafafa;
-    font-family: "Comic Neue", "Helvetica Neue", sans-serif;
+    font-family: "Comic Neue", "Helvetica Neue", sans-serif !important;
+    
+    h2 {
+        font-weight: bold;
+        font-family: "Comic Neue", "Helvetica Neue", sans-serif;
+        font-size: 35px;
+    }
 }
+
 
 .logo {
     padding-bottom: 10px;

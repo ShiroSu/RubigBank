@@ -8,15 +8,15 @@ import { CurrencyService } from '../currency.service';
   styleUrls: ['./exchange.component.scss']
 })
 export class ExchangeComponent implements OnInit {
-  currency:any[] = []//{name: string, rate: number}[] = []
+  currenciesList:any[] = []//{name: string, rate: number}[] = []
   log(smth: any) {
     console.log(smth)
   }
   getCurr():void {
-    this.currencyService.getAllCurrencies().subscribe(response=> {
+    this.currencyService.getAllCurrencies("AZN").subscribe(response=> {
         Object.keys(response.data).map((curr:string)=> {
-          if (curr === "USD" || curr === "EUR" || curr === "RUB" || curr === "TRY")
-          this.currency.push({name: curr, rate: response.data[curr]})
+          if (["USD", "EUR", "RUB", "TRY"].includes(curr)) //curr === "USD" || curr === "EUR" || curr === "RUB" || curr === "TRY"
+          this.currenciesList.push({name: curr, rate: 1/response.data[curr]})
         })
       }
     )

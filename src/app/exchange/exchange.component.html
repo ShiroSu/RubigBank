@@ -1,4 +1,13 @@
 <div class="card exchange">
     <h2 class="card__title">Exchange</h2>
-    <div *ngFor="let curr of currency">{{curr.name}}: {{(1/curr.rate).toFixed(3)}}</div>
+    <table>
+        <tr>
+            <th>Currency</th>
+            <th>Rate</th>
+        </tr>
+        <tr *ngFor="let curr of currenciesList">
+            <td>{{curr.name}}</td>
+            <td>{{curr.rate.toFixed(3)}}</td>
+        </tr>
+    </table>
 </div>

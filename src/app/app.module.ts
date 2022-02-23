@@ -13,6 +13,7 @@ import { ProductsComponent } from './products/products.component';
 import { AboutComponent } from './about/about.component';
 import { FeaturesComponent } from './features/features.component';
 import { ExchangeComponent } from './exchange/exchange.component';
+import { ConvertComponent } from './convert/convert.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ExchangeComponent } from './exchange/exchange.component';
     ProductsComponent,
     AboutComponent,
     FeaturesComponent,
-    ExchangeComponent
+    ExchangeComponent,
+    ConvertComponent
   ],
   imports: [
     BrowserModule,

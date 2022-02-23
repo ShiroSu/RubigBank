@@ -3,6 +3,8 @@ import { HttpClient, HttpHeaders, HttpParams, HttpRequest, HttpResponse } from '
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 
+type Currencies = "AZN" | "USD" | "EUR" | "TRY" | "RUB"
+
 export interface Response {
   success: boolean;
   timestamp: number;
@@ -16,7 +18,7 @@ export class CurrencyService {
   constructor(private http: HttpClient) { }
   
   
-  getAllCurrencies() {
-    return this.http.get<any>('https://freecurrencyapi.net/api/v2/latest?apikey=55b57410-9004-11ec-953f-f36ced380495&base_currency=AZN');
+  getAllCurrencies(base: Currencies) {
+    return this.http.get<any>('https://freecurrencyapi.net/api/v2/latest?apikey=55b57410-9004-11ec-953f-f36ced380495&base_currency='+base);
   }
 }
