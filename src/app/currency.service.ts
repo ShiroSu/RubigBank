@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders, HttpParams, HttpRequest, HttpResponse } from '
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 
-type Currencies = "AZN" | "USD" | "EUR" | "TRY" | "RUB"
+export type Currencies = "AZN" | "USD" | "EUR" | "TRY" | "RUB"
 
 export interface Response {
   success: boolean;

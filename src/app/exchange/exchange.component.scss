@@ -1,8 +1,5 @@
 @import "../app.component.scss";
 
-.container {
-    @include container;
-}
 .card {
     @include card;
     margin-bottom: 15px;

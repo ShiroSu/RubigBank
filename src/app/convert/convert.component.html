@@ -1,1 +1,11 @@
-<p>convert works!</p>
+<div class="card">
+    <h2 class="card__title">Converter</h2>
+    
+    <p *ngFor="let curr of currenciesList">{{curr.name}}: {{curr.rate.toFixed(3)}}</p>
+    <!-- <select (change)="changeCurrency(value)">
+        <option value="USD">USD</option>
+        <option value="RUB">RUB</option>
+        <option value="EUR">EUR</option>
+        <option value="TRY">TRY</option>
+    </select> -->
+</div>

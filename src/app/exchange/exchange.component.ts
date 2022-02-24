@@ -8,7 +8,7 @@ import { CurrencyService } from '../currency.service';
   styleUrls: ['./exchange.component.scss']
 })
 export class ExchangeComponent implements OnInit {
-  currenciesList:any[] = []//{name: string, rate: number}[] = []
+  currenciesList:any[] = []
   log(smth: any) {
     console.log(smth)
   }
