@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatListModule } from '@angular/material/list';
-import { MatGridListModule } from '@angular/material/grid-list';
+import { NgChartsModule } from 'ng2-charts';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './header/header.component';
 import { ProductsComponent } from './products/products.component';
@@ -14,6 +14,7 @@ import { AboutComponent } from './about/about.component';
 import { FeaturesComponent } from './features/features.component';
 import { ExchangeComponent } from './exchange/exchange.component';
 import { ConvertComponent } from './convert/convert.component';
+import { StatisticsComponent } from './statistics/statistics.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +25,15 @@ import { ConvertComponent } from './convert/convert.component';
     AboutComponent,
     FeaturesComponent,
     ExchangeComponent,
-    ConvertComponent
+    ConvertComponent,
+    StatisticsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     MatListModule,
+    NgChartsModule,
     BrowserAnimationsModule
   ],
   providers: [],
